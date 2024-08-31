@@ -5,8 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Computador extends Model
+class Editora extends Model
 {
     use HasFactory;
-    protected $fillable = ['id','marca','preco','ram','disco'];
+    protected $fillable = [
+        'nome',
+        'endereco',
+        'telefone',
+    ];
 }

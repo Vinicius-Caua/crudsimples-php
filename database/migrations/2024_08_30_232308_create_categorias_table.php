@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('computadors', function (Blueprint $table) {
+        Schema::create('categorias', function (Blueprint $table) {
             $table->id();
-            $table->string('marca');
-            $table->decimal('preco',14,2);
-            $table->integer('ram');
-            $table->integer('disco');
+            $table->string('nome');
+            $table->string('descricao')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('computadors');
+        Schema::dropIfExists('categorias');
     }
 };
